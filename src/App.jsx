@@ -8,7 +8,7 @@ import { useState } from "react";
 import trips from "./data/trips";
 
 function App() {
-  
+
   const [customers, setCustomers] = useState(clients);
   const [journeys, setJourneys] = useState(trips);
 
@@ -16,8 +16,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route index element={<HomePage  journeys={journeys} setJourneys={setJourneys}/>} />
-          <Route path="/travel/:id" element={<DetailPage customers={customers} setCustomers={setCustomers} />} />
+          <Route index element={<HomePage journeys={journeys} setJourneys={setJourneys} />} />
+          <Route path="/travel/:id" element={<DetailPage customers={customers} journeys={journeys} setCustomers={setCustomers} />} />
         </Route>
       </Routes>
     </BrowserRouter>
