@@ -3,13 +3,13 @@ import HomePage from "./pages/HomePage";
 import DetailPage from "./pages/DetailPage";
 import MainLayout from "./layouts/MainLayout";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { customers } from "./data/customers";
+import { clients } from "./data/clients";
 import { useState } from "react";
 import trips from "./data/trips";
 
 function App() {
   
-  const [customers, setCustomers] = useState(customers);
+  const [customers, setCustomers] = useState(clients);
   const [journeys, setJourneys] = useState(trips);
 
   return (
