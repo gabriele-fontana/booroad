@@ -48,7 +48,7 @@ export default function TravellersList({ customers }) {
                                     filteredCustomersSearch.map((cliente) => (
                                         <tr key={cliente.id}>
                                             <td>
-                                                <div className="fw-bold">{cliente.nome} {cliente.cognome}</div>
+                                                <div className="fw-bold">{cliente.first_name} {cliente.last_name}</div>
                                                 {/* Visualizzazione condizionale del Codice Fiscale */}
                                                 {selectedId === cliente.id && (
                                                     <div className="badge bg-secondary mt-1">
@@ -57,7 +57,7 @@ export default function TravellersList({ customers }) {
                                                 )}
                                             </td>
                                             <td className="text-muted small">{cliente.email}</td>
-                                            <td className="text-muted small">{cliente.numero}</td>
+                                            <td className="text-muted small">{cliente.phone}</td>
                                             <td className="text-center">
                                                 <button
                                                     className={`btn btn-sm ${selectedId === cliente.id ? 'btn-dark' : 'btn-outline-primary'}`}
