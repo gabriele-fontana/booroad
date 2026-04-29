@@ -1,6 +1,6 @@
 export const clienti = [
-  { nome: "Luigi", cognome: "Rossi", email: "luigi.rossi@gmail.com", numero: "333 4738946", ci: "RSSLGU85M12F205X", id_viaggio: 0 },
-  { nome: "Marco", cognome: "Bianchi", email: "marco.bianchi@gmail.com", numero: "347 2938475", ci: "BNCMRC90A15H501Z", id_viaggio: 0 },
+  { nome: "Luigi", cognome: "Rossi", email: "luigi.rossi@gmail.com", numero: "333 4738946", ci: "RSSLGU85M12F205X", id_viaggio: 7 },
+  { nome: "Marco", cognome: "Bianchi", email: "marco.bianchi@gmail.com", numero: "347 2938475", ci: "BNCMRC90A15H501Z", id_viaggio: 7 },
   { nome: "Giulia", cognome: "Ferrari", email: "giulia.ferrari@libero.it", numero: "328 5647382", ci: "FRRGLI92C45L219K", id_viaggio: 1 },
   { nome: "Francesca", cognome: "Esposito", email: "francesca.esposito@yahoo.it", numero: "366 7382910", ci: "SPSFNC88D46F839P", id_viaggio: 1 },
   { nome: "Alessandro", cognome: "Romano", email: "alessandro.romano@gmail.com", numero: "393 1827364", ci: "RMNLSN95E10H703Q", id_viaggio: 2 },
