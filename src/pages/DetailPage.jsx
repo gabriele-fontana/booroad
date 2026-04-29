@@ -16,8 +16,8 @@ export default function DetailPage({ customers, setCustomers }) {
     return (
         <div className="container py-5">
             <h1>Details</h1>
-            <TravellersList customers={travelCustomers} />
             <TravelersForm customers={customers} setCustomers={setCustomers} />
+            <TravellersList customers={travelCustomers} />
         </div>
     )
 }
