@@ -7,7 +7,7 @@ export default function HomePage() {
     return (
         <div className="container py-5">
             <TravelForm />
-            <div>
+            <div className="row row-col-1 row-cols-xl-2 g-3">
                 {
                     viaggi.map(viaggio => (
                         <TravelCard key={viaggio.id} viaggio={viaggio} />
