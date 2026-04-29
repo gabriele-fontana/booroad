@@ -10,3 +10,5 @@ const accompagnatori = [
   { nome: "Silvia", cognome: "Gatti", email: "silvia.gatti@libero.it", numero: "327 4836190", ci: "GTTSLV94C55H501O" },
   { nome: "Antonio", cognome: "Pellegrini", email: "antonio.pellegrini@gmail.com", numero: "355 9274830", ci: "PLLNTN78M20L219P" },
 ]
+
+export default accompagnatori;
