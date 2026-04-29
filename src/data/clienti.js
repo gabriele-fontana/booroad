@@ -1,0 +1,17 @@
+const clienti = [
+  { nome: "Luigi", cognome: "Rossi", email: "luigi.rossi@gmail.com", numero: "333 4738946", ci: "RSSLGU85M12F205X" },
+  { nome: "Marco", cognome: "Bianchi", email: "marco.bianchi@gmail.com", numero: "347 2938475", ci: "BNCMRC90A15H501Z" },
+  { nome: "Giulia", cognome: "Ferrari", email: "giulia.ferrari@libero.it", numero: "328 5647382", ci: "FRRGLI92C45L219K" },
+  { nome: "Francesca", cognome: "Esposito", email: "francesca.esposito@yahoo.it", numero: "366 7382910", ci: "SPSFNC88D46F839P" },
+  { nome: "Alessandro", cognome: "Romano", email: "alessandro.romano@gmail.com", numero: "393 1827364", ci: "RMNLSN95E10H703Q" },
+  { nome: "Chiara", cognome: "Colombo", email: "chiara.colombo@libero.it", numero: "349 5647281", ci: "CLMCHR91A41A944R" },
+  { nome: "Davide", cognome: "Ricci", email: "davide.ricci@hotmail.it", numero: "320 9384756", ci: "RCCDVD87H20G224S" },
+  { nome: "Sara", cognome: "Marino", email: "sara.marino@gmail.com", numero: "377 6473829", ci: "MRNSRA93B41F839T" },
+  { nome: "Luca", cognome: "Greco", email: "luca.greco@virgilio.it", numero: "345 2837465", ci: "GRCLCU89D12C351U" },
+  { nome: "Valentina", cognome: "Bruno", email: "valentina.bruno@gmail.com", numero: "388 4729381", ci: "BRNVNT94E58H501V" },
+  { nome: "Matteo", cognome: "Gallo", email: "matteo.gallo@libero.it", numero: "331 8374659", ci: "GLLMTT86M08F205W" },
+  { nome: "Elena", cognome: "Conti", email: "elena.conti@yahoo.it", numero: "364 5738291", ci: "CNTLNE90D50G702Y" },
+  { nome: "Simone", cognome: "De Luca", email: "simone.deluca@gmail.com", numero: "392 6482930", ci: "DLCSMN88A15H501B" },
+  { nome: "Martina", cognome: "Costa", email: "martina.costa@gmail.com", numero: "348 7364829", ci: "CSTMTN95C48L219C" },
+  { nome: "Andrea", cognome: "Mancini", email: "andrea.mancini@libero.it", numero: "379 2847361", ci: "MNCNDR91E10F205D" },
+];
