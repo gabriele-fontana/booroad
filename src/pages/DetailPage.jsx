@@ -12,7 +12,7 @@ export default function DetailPage() {
     return (
         <div className="container py-5">
             <h1>Details</h1>
-            <TravellersList />
+            <TravellersList customers={customers} />
             <TravelersForm />
         </div>
     )
