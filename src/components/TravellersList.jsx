@@ -7,7 +7,7 @@ export default function TravellersList() {
     
     // filtro i clienti che hanno id_viaggio uguale all'id dell'URL
     const filteredClients = clienti.filter(
-        (cliente) => cliente.id_viaggio === id
+        (cliente) => cliente.id_viaggio === parseInt(id)
     );
 
     return (
