@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { clienti } from "../data/clienti";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export default function TravelersForm() {
+export default function TravelersForm({ customers, setCustomers }) {
 
     const { id } = useParams();
 
@@ -19,9 +18,13 @@ export default function TravelersForm() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        clienti.push(data);
-        console.log(clienti);
+        setCustomers([...customers, data]);
     }
+
+    useEffect(() => {
+        const newId = customers[customers.length - 1].id + 1;
+        setData({ ...data, id: newId });
+    }, [customers]);
 
     return (
         <>

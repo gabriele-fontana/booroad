@@ -1,19 +1,24 @@
 import TravellersList from "../components/TravellersList";
 import TravelersForm from "../components/TravelersForm";
-import { clienti } from "../data/clienti";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function DetailPage() {
+export default function DetailPage({ customers, setCustomers }) {
 
     const { id } = useParams();
-    const [customers, setCustomers] = useState(clienti.filter(cliente => cliente.id_viaggio === parseInt(id)));
+
+    const viaggioId = parseInt(id);
+
+    const travelCustomers = customers.filter(
+        (cliente) => cliente.id_viaggio === viaggioId
+    );
+
 
     return (
         <div className="container py-5">
             <h1>Details</h1>
-            <TravellersList customers={customers} />
-            <TravelersForm />
+            <TravellersList customers={travelCustomers} />
+            <TravelersForm customers={customers} setCustomers={setCustomers} />
         </div>
     )
 }

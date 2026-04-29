@@ -9,9 +9,9 @@ export default function TravelCard({ viaggio }) {
                     <div className="col-6">
                         <div className="row row-cols-auto gx-2 align-items-center">
                             <i className="bi bi-calendar-range"></i>
-                            <span>{viaggio.data_inizio}</span>
+                            <span>{new Date(viaggio.data_inizio).toLocaleDateString("it-IT")}</span>
                             <i className="bi bi-arrow-right"></i>
-                            <span>{viaggio.data_fine}</span>
+                            <span>{new Date(viaggio.data_fine).toLocaleDateString("it-IT")}</span>
                         </div>
                     </div>
                 </div>
