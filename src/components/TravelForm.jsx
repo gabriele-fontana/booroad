@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { viaggi as initialViaggi } from "../data/viaggi";
 
 export default function TravelForm() {
@@ -9,6 +10,8 @@ export default function TravelForm() {
     data_inizio: "",
     data_fine: ""
   });
+  
+  const navigate = useNavigate();
 
   function handleFormSubmit(e) {
     /* previeni comportamento di default (per non perdere dati) */
@@ -19,6 +22,9 @@ export default function TravelForm() {
     console.log(viaggi);
     /* pulisci newViaggio */
     setNewViaggio({ id: "", destinazione: "", data_inizio: "", data_fine: "" });
+    /* aprire la nuova pagina */
+    setTimeout(() => navigate(`/travel/${viaggi[viaggi.length - 1].id}`), 1500);
+    
   }
 
   return (
