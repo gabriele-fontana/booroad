@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { viaggi as initialViaggi } from "../data/viaggi";
+import { viaggi as initialViaggi } from "../data/trips";
 
 export default function TravelForm() {
   const [viaggi, setViaggi] = useState(initialViaggi);

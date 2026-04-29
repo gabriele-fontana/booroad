@@ -3,12 +3,12 @@ import HomePage from "./pages/HomePage";
 import DetailPage from "./pages/DetailPage";
 import MainLayout from "./layouts/MainLayout";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { clienti } from "./data/clienti";
+import { customers } from "./data/customers";
 import { useState } from "react";
 
 function App() {
 
-  const [customers, setCustomers] = useState(clienti);
+  const [customers, setCustomers] = useState(customers);
 
   return (
     <BrowserRouter>

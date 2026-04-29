@@ -1,4 +1,4 @@
-import { viaggi } from "../data/viaggi"
+import { viaggi } from "../data/trips"
 import TravelCard from "../components/TravelCard"
 import TravelForm from "../components/TravelForm"
 

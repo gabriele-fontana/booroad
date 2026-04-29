@@ -1,4 +1,4 @@
-export const clienti = [
+export const customers = [
   { id: 1, first_name: "Luigi", last_name: "Rossi", email: "luigi.rossi@gmail.com", phone: "333 4738946", codice_fiscale: "RSSLGU85M12F205X", id_viaggio: 7 },
   { id: 2, first_name: "Marco", last_name: "Bianchi", email: "marco.bianchi@gmail.com", phone: "347 2938475", codice_fiscale: "BNCMRC90A15H501Z", id_viaggio: 7 },
   { id: 3, first_name: "Giulia", last_name: "Ferrari", email: "giulia.ferrari@libero.it", phone: "328 5647382", codice_fiscale: "FRRGLI92C45L219K", id_viaggio: 1 },
