@@ -13,7 +13,6 @@ export default function DetailPage({ customers, setCustomers }) {
         (cliente) => cliente.id_viaggio === viaggioId
     );
 
-
     return (
         <div className="container py-5">
             <h1>Details</h1>

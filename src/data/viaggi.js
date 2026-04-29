@@ -42,5 +42,3 @@ export const viaggi = [
     "data_fine": "2026-01-04"
   }
 ]
-
-export default viaggi;
