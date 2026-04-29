@@ -16,8 +16,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/travel/:id" element={<DetailPage customers={customers} setCustomers={setCustomers} journeys={journeys} setJourneys={setJourneys} />} />
+          <Route index element={<HomePage  journeys={journeys} setJourneys={setJourneys}/>} />
+          <Route path="/travel/:id" element={<DetailPage customers={customers} setCustomers={setCustomers} />} />
         </Route>
       </Routes>
     </BrowserRouter>
