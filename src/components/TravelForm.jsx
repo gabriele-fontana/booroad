@@ -29,7 +29,7 @@ export default function TravelForm() {
 
   return (
 
-    <div className="accordion mb-5" id="addNewTravel">
+    <div className="accordion shadow-sm border-0 mb-5" id="addNewTravel">
       <div className="accordion-item">
         <h2 className="accordion-header">
           <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">

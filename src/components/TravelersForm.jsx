@@ -28,7 +28,7 @@ export default function TravelersForm({ customers, setCustomers }) {
 
     return (
         <>
-            <div className="accordion my-4" id="addNewTravel">
+            <div className="accordion shadow-sm border-0 my-4" id="addNewTravel">
                 <div className="accordion-item">
                     <h2 className="accordion-header">
 
