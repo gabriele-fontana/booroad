@@ -29,11 +29,11 @@ export default function TravelForm() {
 
   return (
 
-    <div className="accordion" id="addNewTravel">
+    <div className="accordion mb-5" id="addNewTravel">
       <div className="accordion-item">
         <h2 className="accordion-header">
-          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Vuoi aggiungere un nuovo trips?
+          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Vuoi aggiungere un nuovo viaggio?
           </button>
         </h2>
         <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -54,7 +54,7 @@ export default function TravelForm() {
                 <input type="date" className="form-control" id="end_date" name="end_date" value={newtrips.end_date}
                   onChange={(e) => { setNewTrips({ ...newtrips, end_date: e.target.value }) }} />
               </div>
-              <button type="submit" >Aggiungi tripso</button>
+              <button className="btn btn-primary" type="submit" >Aggiungi viaggio</button>
             </form>
           </div>
         </div>
