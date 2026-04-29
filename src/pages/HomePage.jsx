@@ -5,9 +5,8 @@ import TravelForm from "../components/TravelForm"
 
 export default function HomePage() {
     return (
-        <div className="container">
+        <div className="container py-5">
             <TravelForm />
-
             <div>
                 {
                     viaggi.map(viaggio => (

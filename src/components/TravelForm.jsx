@@ -4,6 +4,7 @@ import { viaggi as initialViaggi } from "../data/viaggi";
 export default function TravelForm() {
   const [viaggi, setViaggi] = useState(initialViaggi);
   const [newViaggio, setNewViaggio] = useState({
+    id: viaggi.length + 1,
     destinazione: "",
     data_inizio: "",
     data_fine: ""
@@ -14,8 +15,10 @@ export default function TravelForm() {
     e.preventDefault();
     /* aggiorna lista viaggi */
     setViaggi([...viaggi, newViaggio]);
+    /* print in console the new array */
+    console.log(viaggi);
     /* pulisci newViaggio */
-    setNewViaggio({ destinazione: "", data_inizio: "", data_fine: "" });
+    setNewViaggio({ id: "", destinazione: "", data_inizio: "", data_fine: "" });
   }
 
   return (
@@ -23,7 +26,7 @@ export default function TravelForm() {
     <form onSubmit={handleFormSubmit}>
       <div className="mb-3">
         <label htmlFor="destinazione" className="form-label">Destinazione:</label>
-        <input type="text" className="form-control" id="destinazione" value={newViaggio.destinazione}
+        <input type="text" className="form-control" id="destinazione" value={newViaggio.destinazione} placeholder="Città, Nazione"
           onChange={(e) => { setNewViaggio({ ...newViaggio, destinazione: e.target.value }) }} />
       </div>
       <div className="mb-3">
