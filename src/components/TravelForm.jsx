@@ -4,9 +4,9 @@ import { viaggi as initialViaggi } from "../data/viaggi";
 export default function TravelForm() {
   const [viaggi, setViaggi] = useState(initialViaggi);
   const [newViaggio, setNewViaggio] = useState({
-    destinazione: "L'isola che non c'è",
-    data_inizio: "2026-04-29",
-    data_fine: "2026-05-02"
+    destinazione: "",
+    data_inizio: "",
+    data_fine: ""
   });
 
   function handleFormSubmit(e) {
