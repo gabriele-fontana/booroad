@@ -36,7 +36,7 @@ export default function TravelForm() {
             Vuoi aggiungere un nuovo viaggio?
           </button>
         </h2>
-        <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div className="accordion-body">
             <form onSubmit={handleFormSubmit}>
               <div className="mb-3">
