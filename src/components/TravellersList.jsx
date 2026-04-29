@@ -17,7 +17,7 @@ export default function TravellersList({ customers }) {
     return (
         <div className="card shadow-sm border-0">
             <div className="card-body">
-                <h2 className="mb-4">Lista Clienti</h2>
+                <h2 className="mb-4">Lista Clienti <span className="h4 ms-3 mb-0 text-secondary">{customers.length} <i className="bi bi-people-fill"></i></span></h2>
 
                 {/* Search Bar */}
                 <div className="mb-4">
@@ -48,7 +48,8 @@ export default function TravellersList({ customers }) {
                                     filteredCustomersSearch.map((cliente) => (
                                         <tr key={cliente.id}>
                                             <td>
-                                                <div className="fw-bold">{cliente.first_name} {cliente.last_name}</div>
+
+                                                <div className="fw-bold"><i className="bi bi-person-fill"></i> {cliente.first_name} {cliente.last_name}</div>
                                                 {/* Visualizzazione condizionale del Codice Fiscale */}
                                                 {selectedId === cliente.id && (
                                                     <div className="badge bg-secondary mt-1">
