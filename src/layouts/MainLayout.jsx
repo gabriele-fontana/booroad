@@ -7,7 +7,9 @@ export default function MainLayout() {
     return (
         <>
             <AppHeader />
-            <Outlet />
+            <main className="bg-light">
+                <Outlet />
+            </main>
             <AppFooter />
         </>
     )
