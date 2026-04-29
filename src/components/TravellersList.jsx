@@ -6,7 +6,7 @@ export default function TravellersList({ customers }) {
     const [selectedId, setSelectedId] = useState(null);
 
     const filteredCustomersSearch = customers.filter((cliente) => {
-        const fullNameSearch = `${cliente.nome} ${cliente.cognome}`.toLowerCase();
+        const fullNameSearch = `${cliente.first_name} ${cliente.last_name}`.toLowerCase();
         return fullNameSearch.includes(search.trim().toLowerCase());
     })
 
