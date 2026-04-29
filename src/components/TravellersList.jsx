@@ -3,7 +3,6 @@ import { clienti } from "../data/clienti";
 
 export default function TravellersList() {
     const { id } = useParams(); // recupero id dalla URL
-    console.log(id);
 
     // filtro i clienti che hanno id_viaggio uguale all'id dell'URL
     const filteredClients = clienti.filter(

@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { clienti } from "../data/clienti";
+import { useParams } from "react-router-dom";
 
 export default function TravelersForm() {
 
+    const { id } = useParams();
+
     const [data, setData] = useState({
+        id: "",
         first_name: '',
         last_name: '',
         email: '',
         phone: '',
-        codice_fiscale: ''
+        codice_fiscale: '',
+        id_viaggio: parseInt(id)
     });
 
     function handleSubmit(e) {
