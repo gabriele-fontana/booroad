@@ -1,4 +1,4 @@
-export const trips = [
+const trips = [
   {
     "id": 1,
     "destination": "Tokyo, Giappone",
@@ -42,3 +42,5 @@ export const trips = [
     "end_date": "2026-01-04"
   }
 ]
+
+export default trips;

@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { viaggi as initialViaggi } from "../data/trips";
+import initialTrips from "../data/trips";
 
 export default function TravelForm() {
-  const [viaggi, setViaggi] = useState(initialViaggi);
-  const newId = viaggi.length + 1;
-  const [newViaggio, setNewViaggio] = useState({
+  const [trips, setTrips] = useState(initialTrips);
+  const newId = trips.length + 1;
+  const [newtrips, setNewTrips] = useState({
     id: newId,
-    destinazione: "",
-    data_inizio: "",
-    data_fine: ""
+    destination: "",
+    start_date: "",
+    end_date: ""
   });
 
   const navigate = useNavigate();
@@ -17,12 +17,12 @@ export default function TravelForm() {
   function handleFormSubmit(e) {
     /* previeni comportamento di default (per non perdere dati) */
     e.preventDefault();
-    /* aggiorna lista viaggi */
-    setViaggi([...viaggi, newViaggio]);
+    /* aggiorna lista trips */
+    setTrips([...trips, newtrips]);
     /* print in console the new array */
-    console.log(viaggi);
-    /* pulisci newViaggio */
-    setNewViaggio({ id: "", destinazione: "", data_inizio: "", data_fine: "" });
+    console.log(trips);
+    /* pulisci newtrips */
+    setNewTrips({ id: "", destination: "", start_date: "", end_date: "" });
     /* aprire la nuova pagina */
     setTimeout(() => navigate(`/travel/${newId}`), 3000);
   }
@@ -33,28 +33,28 @@ export default function TravelForm() {
       <div className="accordion-item">
         <h2 className="accordion-header">
           <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Vuoi aggiungere un nuovo viaggio?
+            Vuoi aggiungere un nuovo tripso?
           </button>
         </h2>
         <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
           <div className="accordion-body">
             <form onSubmit={handleFormSubmit}>
               <div className="mb-3">
-                <label htmlFor="destinazione" className="form-label">Destinazione:</label>
-                <input type="text" className="form-control" id="destinazione" value={newViaggio.destinazione} placeholder="Città, Nazione"
-                  onChange={(e) => { setNewViaggio({ ...newViaggio, destinazione: e.target.value }) }} />
+                <label htmlFor="destination" className="form-label">destination:</label>
+                <input type="text" className="form-control" id="destination" value={newtrips.destination} placeholder="Città, Nazione"
+                  onChange={(e) => { setNewTrips({ ...newtrips, destination: e.target.value }) }} />
               </div>
               <div className="mb-3">
-                <label htmlFor="data_inizio" className="form-label">Data di inizio:</label>
-                <input type="date" className="form-control" id="data_inizio" name="data_inizio" value={newViaggio.data_inizio}
-                  onChange={(e) => { setNewViaggio({ ...newViaggio, data_inizio: e.target.value }) }} />
+                <label htmlFor="start_date" className="form-label">Data di inizio:</label>
+                <input type="date" className="form-control" id="start_date" name="start_date" value={newtrips.start_date}
+                  onChange={(e) => { setNewTrips({ ...newtrips, start_date: e.target.value }) }} />
               </div>
               <div className="mb-3">
-                <label htmlFor="data_fine" className="form-label">Data di fine:</label>
-                <input type="date" className="form-control" id="data_fine" name="data_fine" value={newViaggio.data_fine}
-                  onChange={(e) => { setNewViaggio({ ...newViaggio, data_fine: e.target.value }) }} />
+                <label htmlFor="end_date" className="form-label">Data di fine:</label>
+                <input type="date" className="form-control" id="end_date" name="end_date" value={newtrips.end_date}
+                  onChange={(e) => { setNewTrips({ ...newtrips, end_date: e.target.value }) }} />
               </div>
-              <button type="submit" >Aggiungi viaggio</button>
+              <button type="submit" >Aggiungi tripso</button>
             </form>
           </div>
         </div>
