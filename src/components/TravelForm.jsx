@@ -4,8 +4,9 @@ import { viaggi as initialViaggi } from "../data/viaggi";
 
 export default function TravelForm() {
   const [viaggi, setViaggi] = useState(initialViaggi);
+  const newId = viaggi.length + 1;
   const [newViaggio, setNewViaggio] = useState({
-    id: viaggi.length + 1,
+    id: newId,
     destinazione: "",
     data_inizio: "",
     data_fine: ""
@@ -23,8 +24,7 @@ export default function TravelForm() {
     /* pulisci newViaggio */
     setNewViaggio({ id: "", destinazione: "", data_inizio: "", data_fine: "" });
     /* aprire la nuova pagina */
-    setTimeout(() => navigate(`/travel/${viaggi[viaggi.length - 1].id}`), 1500);
-
+    setTimeout(() => navigate(`/travel/${newId}`), 3000);
   }
 
   return (
