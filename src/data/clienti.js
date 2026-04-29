@@ -10,8 +10,8 @@ export const clienti = [
   { id: 9, nome: "Luca", cognome: "Greco", email: "luca.greco@virgilio.it", numero: "345 2837465", ci: "GRCLCU89D12C351U", id_viaggio: 4 },
   { id: 10, nome: "Valentina", cognome: "Bruno", email: "valentina.bruno@gmail.com", numero: "388 4729381", ci: "BRNVNT94E58H501V", id_viaggio: 4 },
   { id: 11, nome: "Matteo", cognome: "Gallo", email: "matteo.gallo@libero.it", numero: "331 8374659", ci: "GLLMTT86M08F205W", id_viaggio: 5 },
-  { id: 12, nome: "Elena", cognome: "Conti", email: "elena.conti@yahoo.it", numero: "364 5738291", ci: "CNTLNE90D50G702Y", id_viaggio?: 5 },
-  { id: 13, nome: "Simone", cognome: "De Luca", email: "simone.deluca@gmail.com", numero: "392 6482930", ci: "DLCSMN88A15H501B", id_viaggio?: 6 },
-  { id: 14, nome: "Martina", cognome?: "Costa", email?: "martina.costa@gmail.com", numero?: "348 7364829", ci?: "CSTMTN95C48L219C", id_viaggio: 6 },
-  { id: 15, nome?: "Andrea", cognome?: "Mancini", email?: "andrea.mancini@libero.it", numero?:"379 2847361", ci?:"MNCNDR91E10F205D", id_viaggio: 6 },
+  { id: 12, nome: "Elena", cognome: "Conti", email: "elena.conti@yahoo.it", numero: "364 5738291", ci: "CNTLNE90D50G702Y", id_viaggio: 5 },
+  { id: 13, nome: "Simone", cognome: "De Luca", email: "simone.deluca@gmail.com", numero: "392 6482930", ci: "DLCSMN88A15H501B", id_viaggio: 6 },
+  { id: 14, nome: "Martina", cognome: "Costa", email: "martina.costa@gmail.com", numero: "348 7364829", ci: "CSTMTN95C48L219C", id_viaggio: 6 },
+  { id: 15, nome: "Andrea", cognome: "Mancini", email: "andrea.mancini@libero.it", numero: "379 2847361", ci: "MNCNDR91E10F205D", id_viaggio: 6 },
 ];
