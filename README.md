@@ -1,16 +1,19 @@
-# React + Vite
+## booroad
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## project's structure
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- src
+   - assets
+   - layout
+        - MainLayout.jsx //layout principale con header e footer
+   - components
+        - header //navbar
+        - footer //footer della pagina
+        - list //lista dei viaggiatori e relativi contatti
+        - TravelForm //form per inserire nuovi viaggi nella home page
+        - TravelersForm //form per inserire nuovi viaggiatori e relativi contatti
+   - pages
+        - DetailPage //pagina con dettagli del viaggio, lista dei viaggiatori e form per aggiungere nuovi viaggiatori
+        - HomePage //lista viaggi e form per aggiungere nuovi viaggi
+   - App.jsx
+   - Main.jsx
