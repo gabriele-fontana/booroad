@@ -5,17 +5,19 @@ import MainLayout from "./layouts/MainLayout";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { customers } from "./data/customers";
 import { useState } from "react";
+import trips from "./data/trips";
 
 function App() {
-
+  
   const [customers, setCustomers] = useState(customers);
+  const [journeys, setJourneys] = useState(trips);
 
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/travel/:id" element={<DetailPage customers={customers} setCustomers={setCustomers} />} />
+          <Route path="/travel/:id" element={<DetailPage customers={customers} setCustomers={setCustomers} journeys={journeys} setJourneys={setJourneys} />} />
         </Route>
       </Routes>
     </BrowserRouter>
