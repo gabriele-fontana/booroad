@@ -7,11 +7,11 @@ export default function DetailPage({ customers, setCustomers }) {
 
     const { id } = useParams();
 
-    const { travelCustomers, setTravelCustomers } = useState([]);
+    const viaggioId = parseInt(id);
 
-    useEffect(() => {
-        setTravelCustomers(customers.filter((cliente) => cliente.id_viaggio === parseInt(id)));
-    }, [customers, id]);
+    const travelCustomers = customers.filter(
+        (cliente) => cliente.id_viaggio === viaggioId
+    );
 
 
     return (
