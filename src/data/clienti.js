@@ -15,3 +15,5 @@ const clienti = [
   { nome: "Martina", cognome: "Costa", email: "martina.costa@gmail.com", numero: "348 7364829", ci: "CSTMTN95C48L219C" },
   { nome: "Andrea", cognome: "Mancini", email: "andrea.mancini@libero.it", numero: "379 2847361", ci: "MNCNDR91E10F205D" },
 ];
+
+export default clienti;
