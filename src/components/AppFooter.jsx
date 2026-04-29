@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function AppFooter() {
 
     return (
         <footer>
