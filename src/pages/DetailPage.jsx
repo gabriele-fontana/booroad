@@ -16,7 +16,7 @@ export default function DetailPage({ customers, setCustomers, journeys, setJourn
     const currentJourney = journeys?.find(journey => journey.id === viaggioId)
 
     return (
-        <div className="container py-5">
+        <div className="container-xl py-5">
             <div className="row">
                 <div>
                     <h1 className=" text-center">{currentJourney?.destination}</h1>

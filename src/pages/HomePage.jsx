@@ -3,9 +3,9 @@ import TravelCard from "../components/TravelCard"
 import TravelForm from "../components/TravelForm"
 
 
-export default function HomePage( {journeys, setJourneys} ) {
+export default function HomePage({ journeys, setJourneys }) {
     return (
-        <div className="container py-5">
+        <div className="container-xl py-5">
             <TravelForm journeys={journeys} setJourneys={setJourneys} />
             <div className="row row-col-1 row-cols-xl-2 g-3">
                 {
