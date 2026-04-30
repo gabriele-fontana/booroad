@@ -30,45 +30,45 @@ export default function TravellersList({ customers }) {
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="🔍 Cerca partecipante..."
+                                placeholder="Cerca partecipante..."
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
                             />
                         </div>
 
                         <div className="table-responsive">
-                            <table className="table table-hover align-middle">
+                                <table className="table table-striped table-hover align-middle">
                                 <thead className="table-light">
                                     <tr>
-                                        <th>Nome e Cognome</th>
-                                        <th>Email</th>
-                                        <th>Telefono</th>
-                                        <th className="text-center">Azioni</th>
+                                        <th className="d-flex justify-content-between">
+                                            <div>Nome e Cognome</div>
+                                            <div>Dettagli</div>
+                                        </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                    <tbody id="accordionTravellersList">
                                     {filteredCustomersSearch.length > 0 ? (
                                         filteredCustomersSearch.map((cliente) => (
                                             <tr key={cliente.id}>
                                                 <td>
-
-                                                    <div className="fw-bold"><i className="bi bi-person-fill"></i> {cliente.first_name} {cliente.last_name}</div>
-                                                    {/* Visualizzazione condizionale del Codice Fiscale */}
-                                                    {selectedId === cliente.id && (
-                                                        <div className="badge bg-secondary mt-1">
-                                                            CF: {cliente.codice_fiscale || 'Non disponibile'}
+                                                    <div className="accordion" id={`accordionTraveler-${cliente.id}`}>
+                                                        <div className="accordion-item">
+                                                            <h2 className="accordion-header">
+                                                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${cliente.id}`} aria-expanded="false" aria-controls={`collapse${cliente.id}`}>
+                                                                    <div className="fw-bold"><i className="bi bi-person-fill"></i> {cliente.first_name} {cliente.last_name}</div>
+                                                                </button>
+                                                            </h2>
+                                                            <div id={`collapse${cliente.id}`} className="accordion-collapse collapse " data-bs-parent="#accordionTravellersList">
+                                                                <div className="accordion-body">
+                                                                    <div className="text-muted small">{cliente.email}</div>
+                                                                    <div className="text-muted small">{cliente.phone}</div>
+                                                                    <div className="text-muted small">
+                                                                        CF: {cliente.codice_fiscale || 'Non disponibile'}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    )}
-                                                </td>
-                                                <td className="text-muted small">{cliente.email}</td>
-                                                <td className="text-muted small">{cliente.phone}</td>
-                                                <td className="text-center">
-                                                    <button
-                                                        className={`btn btn-sm ${selectedId === cliente.id ? 'btn-dark' : 'btn-outline-primary'}`}
-                                                        onClick={() => toggleCF(cliente.id)}
-                                                    >
-                                                        {selectedId === cliente.id ? 'Chiudi' : 'Dettagli'}
-                                                    </button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         ))
