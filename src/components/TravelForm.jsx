@@ -78,21 +78,21 @@ export default function TravelForm({ journeys, setJourneys }) {
                 {/* destination field */}
                 <div className="mb-3">
                   <label htmlFor="destination" className="form-label">destination:</label>
-                  <input type="text" className="form-control" id="destination" value={newtrip.destination} placeholder="Città, Nazione"
-                    onChange={(e) => { setNewTrip({ ...newtrip, destination: e.target.value }) }} />
+                  <input type="text" className="form-control" id="destination" value={newtrip.destination} placeholder="Città, Nazione" required
+                    onChange={(e) => { setNewTrip({ ...newtrip, destination: e.target.value }) }}/>
                 </div>
 
                 {/* start date field */}
                 <div className="mb-3">
                   <label htmlFor="start_date" className="form-label">Data di inizio:</label>
-                  <input type="date" className="form-control" id="start_date" name="start_date" value={newtrip.start_date}
+                  <input type="date" className="form-control" id="start_date" name="start_date" value={newtrip.start_date} required
                     onChange={(e) => { setNewTrip({ ...newtrip, start_date: e.target.value }) }} />
                 </div>
 
                 {/* end date field */}
                 <div className="mb-3">
                   <label htmlFor="end_date" className="form-label">Data di fine:</label>
-                  <input type="date" className="form-control" id="end_date" name="end_date" value={newtrip.end_date}
+                  <input type="date" className="form-control" id="end_date" name="end_date" value={newtrip.end_date} required
                     onChange={(e) => { setNewTrip({ ...newtrip, end_date: e.target.value }) }} />
                 </div>
 
