@@ -36,51 +36,31 @@ export default function TravellersList({ customers }) {
                             />
                         </div>
 
-                        <div className="table-responsive">
-                                <table className="table table-striped table-hover align-middle">
-                                <thead className="table-light">
-                                    <tr>
-                                        <th className="d-flex justify-content-between">
-                                            <div>Nome e Cognome</div>
-                                            <div>Dettagli</div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                    <tbody id="accordionTravellersList">
-                                    {filteredCustomersSearch.length > 0 ? (
-                                        filteredCustomersSearch.map((cliente) => (
-                                            <tr key={cliente.id}>
-                                                <td>
-                                                    <div className="accordion" id={`accordionTraveler-${cliente.id}`}>
-                                                        <div className="accordion-item">
-                                                            <h2 className="accordion-header">
-                                                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${cliente.id}`} aria-expanded="false" aria-controls={`collapse${cliente.id}`}>
-                                                                    <div className="fw-bold"><i className="bi bi-person-fill"></i> {cliente.first_name} {cliente.last_name}</div>
-                                                                </button>
-                                                            </h2>
-                                                            <div id={`collapse${cliente.id}`} className="accordion-collapse collapse " data-bs-parent="#accordionTravellersList">
-                                                                <div className="accordion-body">
-                                                                    <div className="text-muted small">{cliente.email}</div>
-                                                                    <div className="text-muted small">{cliente.phone}</div>
-                                                                    <div className="text-muted small">
-                                                                        CF: {cliente.codice_fiscale || 'Non disponibile'}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        ))
-                                    ) : (
-                                        <tr>
-                                            <td colSpan="4" className="text-center text-muted py-4">
-                                                Nessun partecipante corrisponde alla ricerca
-                                            </td>
-                                        </tr>
-                                    )}
-                                </tbody>
-                            </table>
+                        <div className="accordion" id="accordionTravellersList">
+                            {filteredCustomersSearch.length > 0 ? (
+                                filteredCustomersSearch.map((cliente) => (
+                                    <div className="accordion-item" key={cliente.id} id={`accordionTraveler-${cliente.id}`}>
+                                        <h2 className="accordion-header">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${cliente.id}`} aria-expanded="false" aria-controls={`collapse${cliente.id}`}>
+                                                <div className="fw-bold"><i className="bi bi-person-fill"></i> {cliente.first_name} {cliente.last_name}</div>
+                                            </button>
+                                        </h2>
+                                        <div id={`collapse${cliente.id}`} className="accordion-collapse collapse " data-bs-parent="#accordionTravellersList">
+                                            <div className="accordion-body">
+                                                <div className="text-muted small">Email: {cliente.email}</div>
+                                                <div className="text-muted small">Telefono: {cliente.phone}</div>
+                                                <div className="text-muted small">
+                                                    CF: {cliente.codice_fiscale || 'Non disponibile'}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))
+                            ) : (
+                                <div colSpan="4" className="text-center text-muted py-4">
+                                    Nessun partecipante corrisponde alla ricerca
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}
