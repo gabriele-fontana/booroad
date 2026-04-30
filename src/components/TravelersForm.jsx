@@ -19,6 +19,15 @@ export default function TravelersForm({ customers, setCustomers }) {
         e.preventDefault();
 
         setCustomers([...customers, data]);
+        setData({
+            id: "",
+            first_name: '',
+            last_name: '',
+            email: '',
+            phone: '',
+            codice_fiscale: '',
+            id_viaggio: parseInt(id)
+        })
     }
 
     useEffect(() => {
