@@ -11,6 +11,7 @@ export default function TravelForm({ journeys, setJourneys }) {
     end_date: ""
   });
   const [timeLeft, setTimeLeft] = useState(10);
+  const [showAlert, setShowAlert] = useState(false);
 
   /* declare useNavigate hook */
   const navigate = useNavigate();
@@ -33,13 +34,11 @@ export default function TravelForm({ journeys, setJourneys }) {
     console.log(journeys);
 
     let intervalId;
+    setTimeLeft(10);
     /* give user feedback */
-    intervalId = setInterval(function () { setTimeLeft(prev => prev - 1) }, 1000)
-    if (trip) {
-      /* ⚠️ TODO: make feedback visible */
-    }
+    intervalId = setInterval(function () { setTimeLeft(prev => prev - 1) }, 1000);
+      (trip) ? setShowAlert(true) : setShowAlert(false);
 
-    
     /* final operations */
     setTimeout(() => {
 
@@ -49,18 +48,23 @@ export default function TravelForm({ journeys, setJourneys }) {
       /* reset newtrip and timeLeft */
       setNewTrip({ destination: "", start_date: "", end_date: "" });
 
+      /* hide alert */
+      setShowAlert(false);
+
       /* redirect to new trip details page */
       navigate(`/travel/${newId}`)
 
-    }, 9999);
+    }, 10000);
   }
 
   return (
     <>
       {/* new trip submission feedback */}
-      <div className="alert alert-info" role="alert">
-        Viaggio aggiunto con successo! Verrai reindirizzato alla pagina del viaggio in <span>{timeLeft}</span> secondi
-      </div>
+      {showAlert &&
+        <div className="alert alert-info" role="alert">
+          Viaggio aggiunto con successo! Verrai reindirizzato alla pagina del viaggio in <span>{timeLeft}</span> secondi
+        </div>
+      }
       {/* new trip accordion -> makes the form collapsible */}
       <div className="accordion shadow-sm border-0 mb-5" id="addNewTravel">
         <div className="accordion-item">
@@ -79,7 +83,7 @@ export default function TravelForm({ journeys, setJourneys }) {
                 <div className="mb-3">
                   <label htmlFor="destination" className="form-label">destination:</label>
                   <input type="text" className="form-control" id="destination" value={newtrip.destination} placeholder="Città, Nazione" required
-                    onChange={(e) => { setNewTrip({ ...newtrip, destination: e.target.value }) }}/>
+                    onChange={(e) => { setNewTrip({ ...newtrip, destination: e.target.value }) }} />
                 </div>
 
                 {/* start date field */}
