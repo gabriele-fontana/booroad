@@ -37,7 +37,7 @@ export default function TravelForm({ journeys, setJourneys }) {
     setTimeLeft(10);
     /* give user feedback */
     intervalId = setInterval(function () { setTimeLeft(prev => prev - 1) }, 1000);
-      (trip) ? setShowAlert(true) : setShowAlert(false);
+    (trip) ? setShowAlert(true) : setShowAlert(false);
 
     /* final operations */
     setTimeout(() => {
@@ -81,7 +81,7 @@ export default function TravelForm({ journeys, setJourneys }) {
 
                 {/* destination field */}
                 <div className="mb-3">
-                  <label htmlFor="destination" className="form-label">destination:</label>
+                  <label htmlFor="destination" className="form-label">Destinazione:</label>
                   <input type="text" className="form-control" id="destination" value={newtrip.destination} placeholder="Città, Nazione" required
                     onChange={(e) => { setNewTrip({ ...newtrip, destination: e.target.value }) }} />
                 </div>
