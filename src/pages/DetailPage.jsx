@@ -16,13 +16,15 @@ export default function DetailPage({ customers, setCustomers, journeys, setJourn
     const currentJourney = journeys?.find(journey => journey.id === viaggioId)
 
     return (
-        <div className="container py-5">
-            <div className="row row-cols-auto gx-5">
-                <h1 className="mb-0">{currentJourney?.destination}</h1>
-                <div className="row row-cols-auto gx-2 align-items-center text-secondary">
-                    <i className="bi bi-calendar-range"></i>
+        <div className="container-xl py-5">
+            <div className="row">
+                <div>
+                    <h1 className=" text-center">{currentJourney?.destination}</h1>
+                </div>
+                <div className="row row-cols-auto g-0 align-items-center justify-content-center text-secondary">
+                    <i className="bi bi-calendar-range me-4"></i>
                     <span>{new Date(currentJourney.start_date).toLocaleDateString("it-IT")}</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <i className="bi bi-arrow-right mx-3"></i>
                     <span>{new Date(currentJourney.end_date).toLocaleDateString("it-IT")}</span>
                 </div>
             </div>
