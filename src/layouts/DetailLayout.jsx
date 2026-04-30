@@ -7,7 +7,7 @@ export default function DetailLayout() {
             <AppHeader>
                 {/* Qua passo all prop Children di AppHeader il contenuto */}
                 <Link to="/" className="btn btn-outline-primary btn-sm">
-                    ← Torna alla lista
+                    Torna alla Home
                 </Link>
             </AppHeader>
             <Outlet />
